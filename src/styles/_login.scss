@@ -1,0 +1,122 @@
+.login {
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    padding: 5rem 0rem 2rem 0rem;
+    // background: rgb(46, 45, 45);
+    // color: whitesmoke;
+    @media screen and (max-width: 375px) {
+      font-size: 1.5rem;
+      padding: 5rem 0rem 2rem 2rem;
+    }
+    @media screen and (max-width: 320px) {
+      padding: 5rem 0rem 2rem 5rem;
+    }
+  }
+  .form {
+    // position: absolute;
+    position: relative;
+    left: 30rem;
+    // bottom: 10rem;
+    top: 2rem;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding: 2rem 2rem 4rem 2rem;
+    // background: rgb(81, 81, 81);
+    background: rgb(99, 98, 98);
+    // margin: 2rem 35rem 0rem 35rem;
+    border-radius: 5px;
+    color: whitesmoke;
+    box-shadow: 10px 10px 8px #a3a3a3;
+    @media screen and (min-width: 1920px) {
+      left: 47rem;
+    }
+    @media screen and (min-width: 2560px) {
+      left: 67rem;
+    }
+    @media screen and (max-width: 1440px) {
+      left: 33rem;
+    }
+    @media screen and (max-width: 1366px) {
+      left: 30rem;
+    }
+    @media screen and (max-width: 1024px) {
+      left: 20rem;
+    }
+    @media screen and (max-width: 768px) {
+      left: 12rem;
+    }
+    @media screen and (max-width: 425px) {
+      left: 0.8rem;
+    }
+    @media screen and (max-width: 375px) {
+      left: 0rem;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1rem 1rem 0rem;
+      .icon {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+        padding-left: 5px;
+      }
+    }
+    .user {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0rem;
+      label {
+        font-size: 1rem;
+      }
+      input {
+        border: none;
+      }
+    }
+    .pass {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0rem;
+      label {
+        font-size: 1rem;
+      }
+      input {
+        border: none;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      background-color: rgb(232, 102, 55);
+      border: none;
+      color: whitesmoke;
+      font-size: 1rem;
+      border: 1px solid whitesmoke;
+      border-radius: 5px;
+      height: 2.5rem;
+    }
+    button:hover {
+      transition-duration: 0.3s;
+      background-color: whitesmoke;
+      color: rgb(232, 102, 55);
+      border: 2px solid rgb(232, 102, 55);
+    }
+  }
+  .logerror {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 3rem;
+    left: 35rem;
+    // text-align: center;
+    padding: 2rem 0rem;
+    color: red;
+  }
+}

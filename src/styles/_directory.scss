@@ -1,0 +1,127 @@
+.directory-container {
+  .add {
+    text-align: end;
+    padding: 2rem;
+    @media screen and (max-width: 425px) {
+      position: relative;
+      right: 6rem;
+      top: 6rem;
+    }
+    @media screen and (max-width: 375px) {
+      right: 3rem;
+    }
+    @media screen and (max-width: 320px) {
+      left: 1rem;
+      top: 7rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 5px 10px;
+      background-color: rgb(232, 102, 55);
+      border: none;
+      color: whitesmoke;
+      border-radius: 5px;
+      height: 2.5rem;
+      cursor: pointer;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    button:hover {
+      transition-duration: 0.3s;
+      background-color: whitesmoke;
+      color: rgb(232, 102, 55);
+      border: 2px solid rgb(232, 102, 55);
+    }
+  }
+  header {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    @media screen and (max-width: 425px) {
+      position: relative;
+      left: 3rem;
+      bottom: 3rem;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 1.2rem;
+      left: 4rem;
+    }
+    @media screen and (max-width: 320px) {
+      left: 6rem;
+    }
+  }
+  .users-container {
+    margin: 5rem 25rem 5rem 8rem;
+    @media screen and (max-width: 1024px) {
+      margin: 5rem 25rem 5rem 15rem;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 5rem 25rem 5rem 6.5rem;
+    }
+    @media screen and (max-width: 425px) {
+      margin: 5rem 0rem;
+    }
+    .users {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+      grid-column-gap: 20rem;
+      @media screen and (max-width: 2560px) {
+        grid-column-gap: 26rem;
+      }
+      @media screen and (max-width: 1920px) {
+        grid-column-gap: 25rem;
+      }
+    }
+    .arrow {
+      position: fixed;
+      top: 30rem;
+      left: 80rem;
+      font-size: 2.5rem;
+      color: rgb(232, 102, 55);
+      @media screen and (min-width: 1440px) {
+        left: 85rem;
+      }
+      @media screen and (min-width: 1920px) {
+        top: 25rem;
+        left: 116rem;
+      }
+      @media screen and (min-width: 2560px) {
+        top: 25rem;
+        left: 97.5%;
+      }
+      @media screen and (max-width: 1024px) {
+        top: 25rem;
+        left: 55rem;
+      }
+      @media screen and (max-width: 768px) {
+        top: 25rem;
+        left: 42rem;
+      }
+    }
+    .arrow:hover {
+      opacity: 0.8;
+    }
+  }
+  footer {
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    @media screen and (min-width: 1920px) {
+      position: absolute;
+      bottom: 1rem;
+      left: 54rem;
+    }
+    @media screen and (min-width: 2560px) {
+      position: absolute;
+      bottom: 1rem;
+      left: 74rem;
+    }
+    @media screen and (max-width: 425px) {
+      text-align: start;
+      padding-left: 2rem;
+    }
+  }
+}

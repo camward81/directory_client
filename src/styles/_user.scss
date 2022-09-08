@@ -1,0 +1,89 @@
+.user {
+  .user-container {
+    display: flex;
+    background-color: rgb(218, 217, 217);
+    padding: 1rem;
+    margin: 2rem;
+    height: max-content;
+    width: 30rem;
+    border-radius: 5px;
+    box-shadow: 7px 7px 8px #a3a3a3;
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    .photo-default {
+      background-color: rgba(0, 0, 0, 0.639);
+      height: 120px;
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      .icon {
+        font-size: 4rem;
+        color: rgb(218, 217, 217);
+      }
+    }
+    .user-details {
+      padding: 0rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      .name {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .edit {
+    position: relative;
+    bottom: 2.4rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(218, 217, 217);
+    padding: 1rem;
+    width: 30rem;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 7px 7px 8px #a3a3a3;
+    p {
+      padding: 10px 0px;
+    }
+    input {
+      margin: 5px 0px;
+    }
+    .username,
+    .password {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      font-size: 1rem;
+      padding: 3px 10px;
+      margin: 0.3rem 1rem 0rem 0rem;
+      background-color: rgb(232, 102, 55);
+      border: none;
+      color: whitesmoke;
+      border: 1px solid whitesmoke;
+      border-radius: 5px;
+      height: 2rem;
+      cursor: pointer;
+    }
+    button:hover {
+      transition-duration: 0.2s;
+      background-color: whitesmoke;
+      color: rgb(232, 102, 55);
+      border: 2px solid rgb(232, 102, 55);
+    }
+    .logerror {
+      color: red;
+    }
+  }
+
+  .user-container:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}

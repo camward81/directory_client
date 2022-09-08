@@ -1,0 +1,126 @@
+.add-container {
+  position: absolute;
+  left: 28rem;
+  bottom: 0rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: rgb(99, 98, 98);
+  color: whitesmoke;
+  border-radius: 5px;
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    bottom: 47rem;
+    left: 30rem;
+  }
+  @media screen and (min-width: 1920px) {
+    position: relative;
+    bottom: 35rem;
+    left: 45rem;
+  }
+  @media screen and (min-width: 2560px) {
+    position: relative;
+    bottom: 32rem;
+    left: 65rem;
+  }
+  @media screen and (max-width: 1366px) {
+    position: absolute;
+    left: 28rem;
+    bottom: 0rem;
+  }
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    bottom: 75rem;
+    left: 17rem;
+  }
+  @media screen and (max-width: 768px) {
+    left: 9rem;
+  }
+  @media screen and (max-width: 425px) {
+    left: 6rem;
+    bottom: 72rem;
+    width: 20rem;
+  }
+  .close {
+    text-align: end;
+    cursor: pointer;
+  }
+  .close:hover {
+    color: rgb(232, 102, 55);
+  }
+  header {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    input {
+      margin-bottom: 0.7rem;
+    }
+    .upload {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0rem;
+      label {
+        padding-right: 0px;
+        padding-bottom: 5px;
+      }
+      .choose-file {
+        display: flex;
+        input {
+          cursor: pointer;
+          margin-bottom: 5px;
+        }
+        button {
+          cursor: pointer;
+          width: 5rem;
+          border-radius: 5px;
+          border: none;
+        }
+        button:hover {
+          opacity: 0.8;
+        }
+      }
+      .progress {
+        .progress-bar {
+          height: 5px;
+          background: rgb(122, 145, 246);
+          margin-top: 10px;
+          border-radius: 1rem;
+        }
+        .completed {
+          font-size: 12px;
+          text-align: center;
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .submit {
+      font-size: 1rem;
+      padding: 5px 10px;
+      background-color: rgb(232, 102, 55);
+      border: none;
+      color: whitesmoke;
+      border: 1px solid whitesmoke;
+      border-radius: 5px;
+      height: 2.5rem;
+      cursor: pointer;
+    }
+    .submit:hover {
+      transition-duration: 0.3s;
+      background-color: whitesmoke;
+      color: rgb(232, 102, 55);
+      border: 2px solid rgb(232, 102, 55);
+    }
+  }
+  .user-err {
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
