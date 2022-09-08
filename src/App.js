@@ -86,7 +86,7 @@ function App() {
     try {
       await axios
         .post(
-          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,
+          `https://api.cloudinary.com/v1_1/djv7ggshy/image/upload`,
           formData,
           {
             headers: { "content-type": "multipart/form-data" },
