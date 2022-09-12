@@ -52,7 +52,10 @@ function App() {
   //login
   const logIn = (e) => {
     e.preventDefault();
-    if (username === "user" && password === "pass") {
+    if (
+      username === process.env.REACT_APP_USER &&
+      password === process.env.REACT_APP_PASS
+    ) {
       setLoggedIn(true);
       console.log("You are logged in!");
     } else {
