@@ -28,6 +28,9 @@ const Directory = ({
   setLogError,
   getUsers,
 }) => {
+  const [search, setSearch] = useState("");
+  const [found, setFound] = useState("");
+  const [noUserMsg, setNoUserMsg] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const myRef = useRef();
 
@@ -49,6 +52,52 @@ const Directory = ({
     observer.observe(myRef.current);
   }, []);
 
+  const searchHandler = () => {
+    users.map((user) => {
+      const userId = user.id;
+      const lastName = user.last.toLowerCase();
+      const firstName = user.first.toLowerCase();
+      const searchName = search.toLowerCase();
+      const foundUser = document.getElementById(userId);
+      if (
+        lastName === searchName ||
+        firstName === searchName ||
+        `${firstName} ${lastName}` === searchName ||
+        `${lastName} ${firstName}` === searchName
+      ) {
+        setFound(user.id);
+        foundUser.scrollIntoView();
+      } else {
+        return "";
+      }
+      return found;
+    });
+  };
+
+  const noUser = () => {
+    let userArr = [];
+    users.map((user) => {
+      const lastName = user.last.toLowerCase();
+      const firstName = user.first.toLowerCase();
+      const searchName = search.toLowerCase();
+      if (
+        lastName === searchName ||
+        firstName === searchName ||
+        `${firstName} ${lastName}` === searchName ||
+        `${lastName} ${firstName}` === searchName
+      ) {
+        userArr.push(user);
+        console.log(userArr.length);
+      }
+      return "";
+    });
+    if (userArr.length === 0) {
+      setNoUserMsg(true);
+    } else {
+      setNoUserMsg(false);
+    }
+  };
+
   return (
     <div
       className="directory-container"
@@ -61,6 +110,25 @@ const Directory = ({
         </button>
       </div>
       <header ref={myRef}>Welcome to the Directory</header>
+      <div className="search">
+        <form>
+          <input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+          ></input>
+          <button
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              searchHandler();
+              noUser();
+            }}
+          >
+            Search
+          </button>
+          {noUserMsg ? <p className="no-entry">No entry found</p> : ""}
+        </form>
+      </div>
       <div className="users-container">
         <div className="users">
           {users
@@ -87,6 +155,7 @@ const Directory = ({
                   logerror={logerror}
                   setLogError={setLogError}
                   getUsers={getUsers}
+                  found={found}
                 />
               ))
             : ""}

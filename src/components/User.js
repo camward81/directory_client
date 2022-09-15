@@ -37,6 +37,7 @@ const User = ({
   logerror,
   setLogError,
   getUsers,
+  found,
 }) => {
   //remove from DB
   const removeFromDB = async ({ id }) => {
@@ -69,7 +70,15 @@ const User = ({
 
   return (
     <div className="user" id={id}>
-      <div className="user-container" onClick={() => setEditUser(id)}>
+      <div
+        className="user-container"
+        style={
+          found === id && editUser === ""
+            ? { border: "3px solid  rgb(232, 102, 55)" }
+            : { border: "" }
+        }
+        onClick={() => setEditUser(id)}
+      >
         {photo ? (
           <img height="120" width="120" src={photo} alt="" />
         ) : (
